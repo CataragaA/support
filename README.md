@@ -1,3 +1,0 @@
-# support
-cristi
-bachata
