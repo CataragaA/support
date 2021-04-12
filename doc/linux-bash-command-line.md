@@ -23,7 +23,7 @@
 * `touch` - crează un fişier text cu numele indicat
 * `cp` - **copy** - copiază fişierul sau directorul indicat într-un nou loc:
     * exemplu => (cp -r ../../curs-Cmd-Line/ .)
-    * `cp A B` – copiere fişier A şi se crează fişierul B 
+    * `cp A B` – copiere fişier A şi se crează fişierul B (pe care il putem denumi)
 * `mv` - **move** - mută un fişier sau director în altă locaţie dar în acelaşi timp poate să şi redenumească.
   * `mv A B` – mutare A în B în cazul în care B este director 
   * `mv A B` – redenumire A în B dacă B este fişier  
@@ -46,35 +46,3 @@
 ## Blocknote
 **_ATENŢIE!_**  
 Fişierele şterse din consolă nu se duc într-un folder numit Trash ca în cazul interfeţelor grafice. Odată şterse fişierele nu mai pot fi recuperate.
-
-
-
-
-# **Mark Down** 
-Markdown este un mod de a stiliza textul pe web, controland afișarea documentului, formarea cuvintelor cu caractere aldine sau cursive, adăugarea de imagini și crearea listelor\
-[MarkDown logo](1200px-Markdown-mark.svg.png)
-
-## Lista comenzi uzuale
-* `#` - Capitol principal
-* `##` - Subcapitol principal
-* `__xxxxx__` - text ingrosat  (underline dublu)
-* `**xxxxx**` - text ingrosat
-* `_xxxxx_` - text inclinat
-* `*......*` -text inclinat
-* `_**xxxxx**_` - text ingrosat si inclinat
-* `*` - folosire simbol punct pentru enumerare randuri
-* `Tab *` - child parent
-* `1.` - numerotare randuri
-* `CTRL+G` - gasire rand 
-* `\` - _**Black slash**_ blocheaza simbolul care urmeaza immediat dupa
-* `\` - _**Black slash**_ - trecerea la urmatorul rand 
-* `[.....](...)` - in paranteze patratate denumire materialului+ in paranteze normale => calea documentului atasat+ denumirea identica
-* `~~......~~` - orice text intre 2 _**Tilda**_ va aparea taiat
-* 
-* 
-## Link-uri
-* Github : https://github.com
-* 
-* 
-## Blocknote
-> Acest conspect a fost realizat cu ajutorul mentorului meu Secareanu Cristian
