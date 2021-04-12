@@ -1,6 +1,7 @@
 # **Mark Down** 
 Markdown este un mod de a stiliza textul pe web, controland afișarea documentului, formarea cuvintelor cu caractere aldine sau cursive, adăugarea de imagini și crearea listelor\
-[MarkDown logo](1200px-Markdown-mark.svg.png)
+![MarkDown logo](markdown-logo.png)
+
 
 ## Lista comenzi uzuale
 * `#` - Capitol principal

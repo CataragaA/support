@@ -8,7 +8,7 @@ Deci, Git este un instrument de linie de comandă, dar centrul în jurul căruia
 
 
 ## Lista comenzi uzuale
-[schema](git-commands.png.png)
+![schema](git-commands.png)
 * `git config` - setarea numele autorului și adresa de e-mail.\
 Usage: git config –global user.name “[name]”  
 Usage: git config –global user.email “[email address]”
