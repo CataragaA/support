@@ -1,5 +1,11 @@
 # **Git bash command line** 
-## Notiun de baza 
+
+## Cuprins
+1. [Notiuni hjhg  de baza](#notiuni-de-baza)
+   1. 1
+2. [Link-uri](#link-uri)
+
+## Notiuni de baza 
 * Git este un sistem de control al versiunii cu sursă deschisă, lansat de Linus Trovalds - aceeași persoană care a creat Linux, conceput pentru a gestiona de la proiecte mici la proiecte foarte mari, cu viteză și eficiență. Este un software care te ajuta la versionarea codului personal.\
 Deci, Git este un instrument de linie de comandă, dar centrul în jurul căruia toate lucrurile care implică Git se învârtesc, este GitHub.com - unde dezvoltatorii își păstrează proiectele și se conectează cu oameni asemănători.
 > `branch main` = repo local (repertoriu) -este o locație în care sunt stocate toate fișierele pentru un anumit proiect. Fiecare proiect are un repo propriu și îl putem accesa printr-un URL unic.
