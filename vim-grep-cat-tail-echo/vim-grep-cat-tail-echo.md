@@ -24,7 +24,7 @@ Cuprins comenzi
 * `:set ignorecase` - anulare key sensitive, astfel incat textul sa poate fi cautat cu majuscule si minuscule.
   
 # 2. Grep
-Cu ajutorul grep se poate căuta într-un fișier text linie cu linie după un anumit șir de caractere (care poate fi specificat și prin intermediul unei expresii regulate) și afișa liniile care conțin acel șablon (pattern) indicat.
+Cu ajutorul grep **Get Regular Expression Patterns**, se poate căuta într-un fișier text linie cu linie după un anumit șir de caractere (care poate fi specificat și prin intermediul unei expresii regulate) și afișa liniile care conțin acel șablon (pattern) indicat.
 * `man grep` - instructiuni in terminal pentru utilizare
 * Cea mai simplă formă a comenzii grep este:
 `grep support file-ana.txt` - Comanda îmi va afișa toate liniile din fișierul file-ana.txt care conțin șirul de caractere support.
@@ -55,8 +55,8 @@ Cu ajutorul grep se poate căuta într-un fișier text linie cu linie după un a
 Echo este utilizat în mod frecvent în scripturile shell pentru a afișa un mesaj sau pentru a produce rezultatele altor comenzi.
 * Folosim comanda cat pentru a vizualiza conținutul fișierului: `cat file1.txt`
 * _Redicretionare catre un fisier_ =>
-`echo -e 'Afara ploua si este urat. Socrates' >> file.txt` . 
-Dacă file.txt nu există, comanda îl va crea. Când utilizați > fișierul va fi suprascris, în timp ce >> va adăuga noul text pe langa ce se afla in fișier.
+`echo -e 'Afara ploua si este urat' >> file.txt` . 
+Dacă file.txt nu există, comanda îl va crea. Când utilizam **>**,  fișierul va fi suprascris, în timp ce **>>**- va adăuga noul text pe langa ce se afla in fișier.
 
 
 # 5. Tail

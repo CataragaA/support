@@ -12,6 +12,7 @@ Git este un VCS creat în 2005 de Linus Torvalds. Dezvoltatorul care a pornit ke
 * `Git`- este un sistem de control al versiunii cu sursă deschisă, lansat de Linus Trovalds - aceeași persoană care a creat Linux, conceput pentru a gestiona de la proiecte mici la proiecte foarte mari, cu viteză și eficiență. Este un software care te ajuta la versionarea codului personal.\
 Deci, Git este un instrument de linie de comandă, dar centrul în jurul căruia toate lucrurile care implică Git se învârtesc, este GitHub.com - unde dezvoltatorii își păstrează proiectele și se conectează cu oameni asemănători.
 * `branch main` = repo local (repertoriu) -este o locație în care sunt stocate toate fișierele pentru un anumit proiect. Fiecare proiect are un repo propriu și îl putem accesa printr-un URL unic.
+* `origin/main branch` = repo din GitHub
 * "Github.com" => server
 * `Git` => program
     * _De ce este util un sistem de control al versiunilor, chiar dacă este folosit doar de o singură persoană?_\
@@ -42,7 +43,7 @@ Usage: git add + denumire fisier sau mai multe separate prin spatiu liber.
     * Când apelăm Git add, îi spunem lui Git că dorim să adăugăm modificările actuale din acel fișier la lista modificărilor care urmează să fie angajate. Acest lucru înseamnă că fișierul nostru face parte, în prezent, din zona intermediară și va fi validat odată ce vom rula următoarea comandă - git commit. În acest caz, în loc să deschidem un editor, să trecem mesajul de validare folosim liniuță m, afirmând că am adăugat puncte la sfârșitul frazelor.
 * `git commit` - incarcare REPO Local urmat de un comentariu\
 **Usage: git commit -m “comentariu max 72 caractere in ghilimele”**
-*`git commit -a` - incarcare toate fisiere fara comanda **add**
+* `git commit -a` - incarcare toate fisiere fara comanda **add**
 Atunci când comiteți fișiere noi sau modificări cu git commit, utilizatorul nu furnizeazea un mesaj de confirmare, angajarea/comiterea va fi întrerupt.
 * `git status` - listează toate fișierele care trebuie incarcate pe serverul Github
 * `git push` - incarcare finala REPO Local pe server Github
@@ -53,6 +54,7 @@ Atunci când comiteți fișiere noi sau modificări cu git commit, utilizatorul 
 * `git rm`+ file = stergere din local 
 * `git mv` = mutare sau redenumire 
 * `git branch` -afișarea ramurilor existente
+* `git merge` - combina ramurile/branch și istoricul ei Git
 * `diff` - identifica diferentele dintre fisiere, împarte modificările în două secțiuni separate.
 * `diff -u` este folosit pentru a compara două fișiere, linie cu linie, și pentru a avea liniile diferite comparate unul lângă altul în aceeași ieșire.
 * `diff-u old_file new_ file > change.diff` => include toate modificările dintre fișierul vechi și cel nou, plus contextul suplimentar necesar pentru a înțelege modificările și pentru a aplica aceste modificări înapoi la fișierul original.
@@ -60,6 +62,18 @@ Atunci când comiteți fișiere noi sau modificări cu git commit, utilizatorul 
 * `patch_usage.py < disk_usage.diff` - Am pregătit un fișier diff cu modificările care trebuie aplicate scriptului
   
   
-# 3. Link-uri
+# 3. GitHub
+GitHub este un serviciu de găzduire a depozitului Git bazat pe web. În plus față de funcționalitatea de control a versiunilor Git, GitHub include funcții suplimentare, cum ar fi urmărirea erorilor și gestionarea sarcinilor. GitHub ne permite să partajăm și să accesăm depozite pe web și să le copiem sau să le clonăm pe computerul nostru local, astfel încât să putem lucra la ele. Alte servicii care oferă funcționalități similare sunt BitBucket și GitLab.
+
+Git acceptă o varietate de moduri de conectare la un depozit la distanță. Unele dintre cele mai frecvente folosesc protocoalele HTTP, HTTPS și SSH și adresele URL corespunzătoare: 
+- `HTTP` este în general utilizat pentru a permite accesul numai la citire la un depozit. Cu alte cuvinte, le permite oamenilor să cloneze conținutul repo-ului dvs. fără să le permită să împingă conținut nou către acesta. 
+- `HTTPS` și `SSH`, ambele oferă metode de autentificare a utilizatorilor, astfel încât să puteți controla cine primește permisiunea de a efectua actiunea de **push**.
+
+* Se creaza cont pe GitHub si initiaza un nou repositoriu
+* `git clone [link]` de la repositoriu
+* `git config - - global credential.helper cache` - pentru a nu mai introduce login si parola Github.
+
+
+# 4. Link-uri
 * Github : https://github.com
   
