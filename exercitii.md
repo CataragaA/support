@@ -38,9 +38,23 @@
 
 9. Statusul unui proces : RASPUNS : `ps -ux`
 10. Ai urmatoarea structura de directoare: Desktop:-> Ana1 cu subfolder Ana4 si Ana2 cu subfolder Ana3. Incepe linia de comanda cd ~/Desktop/Ana2/Ana3 si completeaza comanda ca sa ajungi in Ana4. RASPUNS : `cd ~/Desktop/Ana2/Ana3/../../Ana1/Ana4`
-
-1.  Ce comandă este utilizată pentru a afișa numele sistemului de operare - `uname` , `uname -r` - versiunea.
-2.  Ce comandă este utilizată pentru a afișa toate fișierele, inclusiv fișierele ascunse în actualul și subdirectoarele sale? RASPUNS : `ls -aR`
+11. Ce comandă este utilizată pentru a afișa numele sistemului de operare - `uname` , `uname -r` - versiunea.
+12. Ce comandă este utilizată pentru a afișa toate fișierele, inclusiv fișierele ascunse în actualul și subdirectoarele sale? RASPUNS : `ls -aR`
+13. Ce vrei să spui prin **Sed**? : Raspuns : 
+* Sed este o comandă utilizată pentru transformarea secvențelor de text. 
+* Comanda citește fișierele de intrare linie cu linie, apoi modifică fiecare linie corespunzător regulilor specificate într-un limbaj simplu, și afișează linia. 
+* Sed este adesea folosit ca instrument de căutare și înlocuire.
+14. Explicați despre diferitele versiuni ale comenzii Sed?
+`GNU sed` -versiunea 4.8 a GNU sed, un editor de flux.
+Drepturi de autor © 1998–2020 Free Software Foundation, Inc.
+Se acordă permisiunea de a copia, distribui și / sau modifica acest document în condițiile licenței GNU Free Documentation License.
+1.  Explicați sintaxa comenzii Sed. RASPUNS :
+Comanda Sed ajuta să modificam fișierele, pentru a înlocui și găsi textul, pentru a căuta și înlocui un șir și este un șir de filtrare multifuncțional.
+Sintaxă:  Sed „s / șir vechi / șir nou / g”;
+* s: înseamnă substituire
+* g: înseamnă fiecare linie toate aparițiile
+* fără g: înseamnă fiecare linie prima apariție
+16. Poti crea fisiere cu sed? RS: NU
 
 
 # Incepatori 
@@ -88,3 +102,13 @@ RASPUNS : `join -1 2 -2 1 fisier1.txt fisier2.txt`\
 1 Radu Popescu
 2 Ioana Popescu
 3 Maria Ionescu
+8. Cum se elimină liniile goale dintr-un fișier specific utilizând comanda Sed? RASPUNS: 
+`sed ‘/^$/d’ Sed_File.txt`; sau `sed 'n;d' Sed_File.txt`
+Deoarece „^” indică începutul liniei și „$” indică sfârșitul liniei, „^ $” înseamnă linii goale. n N    Read/append the next line of input into the pattern space.
+9. Cum să tipăriți numai linia goală utilizând comanda Sed? RASPUNS : `sed -n ‘/^$/p’ Sed_file.txt`  sau `sed -n 'n;p' Sed_File.txt`
+10. Cum stergi cuvantul complexsql din fisier ? RASPUNS :`sed "s/complexsql//g" Sed_File.txt`
+11. Afisati primul si ultimul rand din fisier cu sed. RASPUNS : `sed -n "1p;$p" Sed_File.txt`
+12. Scrieți o comandă pentru a duplica fiecare linie într-un fișier? RASPUNS : `sed "p" Sed_File.txt`
+13. Scrieți o comandă pentru a duplica fiecare linie într-un fișier? RASPUNS : `sed "p" Sed_File.txt`
+14. Scrieți o comandă pentru a duplica liniile goale într-un fișier? RASPUNS: `sed "/^$/p" Sed_File.txt`
+15. Scrieți o comandă sed pentru a imprima liniile care nu conțin cuvântul „complex”? RASPUNS : `sed -n '/complex/!p' Sed_File.txt` sau `sed '/complex/d' Sed_File.txt`
