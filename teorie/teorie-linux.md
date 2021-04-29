@@ -322,40 +322,10 @@ ATENTIE când folosim comanda make install. Dacă dorim să ștergem acest pache
 
 
 ## **Capitol 6 - Sistem de fisiere**
-_Sistemul de fișiere_ poate fi definit ca modul de stocare a datelor într-o anumită manieră, astfel încât acestea să poată fi localizate fără probleme, atunci când este necesar. Pe baza sistemului de operare, depinde de ce tip de sistem de fișiere a fost urmat. Scopul principal al sistemului de fișiere este de a ușura utilizatorilor și sistemului de operare să stocheze fișierele într-o manieră specificată, astfel încât toate părțile să poată stoca sau prelua fișierele cu ușurință. Sistemul de fișiere, așa cum spune numele, se ocupă de fișierele și directoarele care se presupune că sunt păstrate în dispozitivul de stocare folosind orice sistem de operare. Sistemul de operare joacă doar rolul unui intermediar care facilitează transferul de date către dispozitivul de stocare, astfel încât acesta să poată fi stocat acolo.
-
-### _Top 7 sistem de fișiere Linux din septembrie 2019_ :
-![TOP](linux-file-system.png.png)
-1. **Ext4**
-   
-Sistemul de operare Linux ne permite să folosim sistemul de fișiere Ext2, Ext3, Ext4 unde Ext4 a fost considerat drept distribuția modernă și, de asemenea, cea mai eficientă. Dacă utilizatorul nu selectează niciun sistem de fișiere decât Ext4 va fi considerat cel implicit. Acesta permite utilizatorului să gestioneze unitatea de disc de dimensiuni mari.
-
-2. **BtrFS**
-   
-Acesta este celălalt sistem de fișiere furnizat de sistemul de operare Linux. În termeni obișnuiți, a fost numit Butter FS. Fiind dezvoltat de oracle, acesta este unul dintre cele mai eficiente sisteme de fișiere capabile să proceseze volumul mare de date. În timpul instalării, trebuie să ne asiguram că am ales acest lucru, deoarece nu este sistemul de fișiere implicit în Linux.
-
-3. **JFS**
-   
-Acest sistem de fișiere este popular datorită simplității și capacității sale de a funcționa în funcție de dimensiunea hard disk-ului. Reprezintă un sistem de fișiere publicat și a fost dezvoltat de IDM. Funcționează bine cu ambele tipuri de hard disk-uri: stocare mică și mare. Acest sistem de fișiere utilizează foarte puțină putere de procesare a procesorului și, datorită acestei caracteristici, este preferat de unii dintre administratorii sistemului.
-
-4. **ReiserFS**
-   
-ReiserFS este unul dintre sistemele de fișiere din Linux, care a fost înlocuit de Reiser4 din cauza ineficienței sale. Este recomandat să alegeți Butter FS pe ReiserFS atunci când vine vorba de stocarea sau păstrarea datelor pe termen lung. Oricare dintre administratorii de sistem abia îl folosește, deoarece necesită ceva mai eficient pentru a lucra cu datele și hard disk-urile.
-
-5. **ZFS**
-   
-Când vine vorba de cel mai avansat tip de sistem de fișiere care are multe caracteristici speciale, este întotdeauna ZFS. Acest sistem de fișiere ne permite striping-ul și discurile de disc dinamice care sunt foarte utile în timpul lucrului cu dispozitivul de stocare a datelor. Este dezvoltat de microsistemul solar și organizația este responsabilă pentru toate actualizările și actualizările din acest sistem de fișiere.
-
-6. **FAT32**
-   
-Acesta este cel mai obișnuit sistem de fișiere care este utilizat în toate sistemele de operare, cum ar fi Linux, Windows și așa mai departe. Acesta oferă cea mai bună modalitate de a stoca fișierele, astfel încât sistemul de operare să poată găsi ușor de gestionat acele fișiere și directoare. Este important să înțelegem că, deși este cel mai obișnuit, utilizatorul trebuie să aleagă ce sistem de fișiere li se potrivește cel mai bine înainte de a alege unul pentru sistemul lor de operare.
-
-7. **exFAT**
-   
-Este un alt sistem de fișiere care aparține familiei FAT. De asemenea, este considerat sistemul de fișiere utilizat în mod frecvent atunci când vine vorba de lucrul cu datele sau fișierele. Toate sistemele de operare pot utiliza acest sistem de fișiere pentru a eficientiza funcționarea. Acest sistem de fișiere este bun atunci când vine vorba de a lucra cu date cu volum redus sau mare.
-
+_Sistemul de fișiere_ poate fi definit ca modul de stocare a datelor într-o anumită manieră, astfel încât acestea să poată fi localizate fără probleme, atunci când este necesar. Pe baza sistemului de operare, depinde de ce tip de sistem de fișiere a fost urmat.Sistemul de fișiere se ocupă de fișierele și directoarele care se presupune că sunt păstrate în dispozitivul de stocare folosind orice sistem de operare. Sistemul de operare joacă doar rolul unui intermediar care facilitează transferul de date către dispozitivul de stocare, astfel încât acesta să poată fi stocat acolo.
 
 ![teorie](teorie%20linux.jpg)
+Daca tastam în terminal comanda ls -l / pentru a vedea directoarele afișate sub directorul rădăcină, ar trebui să arate după cum urmează:
 * / – Directorul rădăcină a întregii ierarhii a sistemului de fișiere. Totul se află în interiorul acestui director.
 * /bin – Programe (fișiere binare) esențiale gata să fie rulate; include comenzile de bază ale sistemului cum ar fi ls sau cp.
 * /boot – Conține fișierele necesare încărcării kernelului.
@@ -372,22 +342,133 @@ Este un alt sistem de fișiere care aparține familiei FAT. De asemenea, este co
 * /sbin – Conține fișiere binare esențiale funcționării sistemului, de regulă pot fi rulate doar de utilizatorul root.
 * /srv – Date specifice care sunt servite (oferite) de către sistem.
 * /tmp – Director de stocare pentru fișierele temporare.
-* /usr – Acest director este oarecum denumit în mod nefericit. De cele mai multe ori nu conține fișiere ale utilizatorilor ca cele pe care le regăsim în directorul home. Acesta este menit pentru programele și utilitarele instalate de către utilizator, însă asta nu vă împiedică să adaugați directoare personale înăuntrul acestuia. Aici mai regăsim și subdirectoare ca /usr/bin, /usr/local, etc.
+* /usr – Acest director este oarecum denumit în mod nefericit. De cele mai multe ori nu conține fișiere ale utilizatorilor ca cele pe care le regăsim în directorul home. Acesta este menit pentru programele și utilitarele instalate de către utilizator, însă asta nu ne împiedică să adaugam directoare personale înăuntrul acestuia. Aici mai regăsim și subdirectoare ca /usr/bin, /usr/local, etc.
 * /var – Directorul cu variabile este folosit pentru jurnalizarea (fișierele jurnal ale) sistemului, a utilizatorilor, cache, etc. În principiu cam tot ce este predispus să se schimbe continuu.
 
-### Scurtaturi manipulare foldere/fisiere
-* `.` (directorul curent). Este directorul în care vă aflați în mod curent.
-* `..` (directorul părinte). Accesează directorul de deasupra directorului curent.
-* `~` (directorul home). Acest simbol special ~ vă duce direct în directorul utilizatorului dvs. din interiorul foldwului home, ca de exemplu /home/radu.
-* `–` (directorul anterior). Vă va duce la directorul anterior accesat de dvs.
-* `!!` - scurtatura comanda history - va executa ultima comandă introdusă de dvs.
-* `CTRL+r`- alta scurtatura history - vor începe să vă fie afișate pe ecran sugestii de potrivire și puteți naviga prin acestea, in functie de cuvintele cheie introduse.
-* `clear` sau `CTRL+l` -curatare terminal
-* `*` Wildcard-ul suprem, este folosit pentru reprezentarea tuturor caracterelor singulare sau a oricărui șir de caractere.
-* `?` folosit pentru repezentarea unui caracter
-* `[ ]` folosit pentru a reprezenta orice caracter enumerat în parantezele drepte
-* `>(stout)`  reprezintă un operator de redirecționare care ne permite să modificăm unde se duce output-ul standard. Ne permite să trimitem output-ul comenzii echo Salut Lume către un fișier în loc să fie trimis implicit către ecran. 
-* `<(stdin)` -
-### Concluzie
-Sistemul de fișiere Linux a fost considerat ca structura de stocare asemănătoare arborelui, unde partea superioară a ierarhiei era ocupată de rădăcină sau /. Fiecare utilizator are directorul principal în Linux și de acolo directorul de acasă, poate accesa toate fișierele care se încadrează în sucursala lor. Există unele fișiere care dețin configurația sistemului și pot fi utilizate doar de către utilizatorul root. Aceste fișiere sau directoare nu oferă acces utilizatorului normal. Utilizatorii normali nu ar trebui să facă modificări în fișierele interne ale sistemului de operare și, prin urmare, aceste fișiere sunt restricționate pentru utilizarea lor. În ramura directorului de acasă al utilizatorului, acestea au mai multe alte fișiere care ar putea fi utilizate pentru a stoca fișierele la alegere, ceea ce face ușor să lucreze cu sistemul de operare.
+### _Top 7 sistem de fișiere Linux din septembrie 2019_ :
+![TOP](linux-file-system.png.png)
+1. **Ext4**
+   
+Acesta este cel mai obișnuit pentru sistemele de fișiere Linux. Este compatibil cu versiunile mai vechi ext2 sau ext3. Suportă discuri de mărime de până la un exabyte și fișiere de până la 16 terabytes și mai multe caracteristici. Este alegerea standard pentru sistemele de fișiere Linux.
 
+2. **BtrFS**
+   
+În termeni obișnuiți, a fost numit Butter FS. Fiind dezvoltat de oracle, acesta este unul dintre cele mai eficiente sisteme de fișiere capabile să proceseze volumul mare de date, copii de rezervă incrementale, creșteri de performanță și altele. În timpul instalării, trebuie să ne asiguram că am ales acest lucru, deoarece nu este sistemul de fișiere implicit în Linux. 
+
+3. **JFS**
+   
+Acest sistem de fișiere este popular datorită simplității și capacității sale de a funcționa în funcție de dimensiunea hard disk-ului, dezvoltat de IDM. Funcționează bine cu ambele tipuri de hard disk-uri: stocare mică și mare, utilizează foarte puțină putere de procesare a procesorului și, datorită acestei caracteristici, este preferat de unii dintre administratorii sistemului.
+
+4. **ReiserFS**
+   
+ReiserFS este unul dintre sistemele de fișiere din Linux, care a fost înlocuit de Reiser4 din cauza ineficienței sale. Este recomandat să alegeți Butter FS pe ReiserFS atunci când vine vorba de stocarea sau păstrarea datelor pe termen lung. Oricare dintre administratorii de sistem abia îl folosește, deoarece necesită ceva mai eficient pentru a lucra cu datele și hard disk-urile.
+
+5. **ZFS**
+   
+cel mai avansat tip de sistem de fișiere care are multe caracteristici speciale, ne permite striping-ul și discurile de disc dinamice care sunt foarte utile în timpul lucrului cu dispozitivul de stocare a datelor. Este dezvoltat de microsistemul solar și organizația este responsabilă pentru toate actualizările și actualizările din acest sistem de fișiere.
+
+6. **FAT32**
+   
+oferă cea mai bună modalitate de a stoca fișierele, astfel încât sistemul de operare să poată găsi ușor de gestionat acele fișiere și directoare. Este important să înțelegem că, deși este cel mai obișnuit, utilizatorul trebuie să aleagă ce sistem de fișiere li se potrivește cel mai bine înainte de a alege unul pentru sistemul lor de operare.
+
+7. **exFAT**
+   
+Este un alt sistem de fișiere care aparține familiei FAT, considerat sistemul de fișiere utilizat în mod frecvent atunci când vine vorba de lucrul cu datele sau fișierele. Toate sistemele de operare pot utiliza acest sistem de fișiere pentru a eficientiza funcționarea. Acest sistem de fișiere este bun atunci când vine vorba de a lucra cu date cu volum redus sau mare.
+
+### _Anatomia unui disc_
+SSD sau Hard discurile (discurile fixe) pot fi împărțite în partiții, în principiu făcând astfel mai dispozitive tip bloc.
+Partițiile sunt extrem de folositoare pentru separarea datelor, putem crea cu foarte mare ușurință o partiție în loc să formatam întregul disc un singur tip de sistem de fișiere.
+
+Fiecare disc va avea un tabel de partiționare (partition table)care stochează sectoarele discului alocate unei anumit partiții. Există două principale scheme de tabel folosite, și anume Master Boot Record (MBR) și GUID Partition Table (GPT).
+* **MBR** 
+  * tabel de partiționare tradițional 
+  * Poate avea partiții primare, extinse și logice
+  * are o limită de patru partiții primare
+  * Partițiile adiționale pot fi create prin transformarea unei partiții primare într-o partiție extinsă, apoi în partiția extinsă se pot adăuga partiții logice. 
+  * Suportă discuri de până la 2 terabytes
+* **GPT**
+    * noul standard pentru pentru partiționarea discurilor
+    * Are un singur tip de partiție și putem crea o multitudine
+    * Fiecare partiție are un ID unic global (globally unique ID (GUID))
+    * Folosit de regulă împreună cu bootarea bazată pe UEFI 
+
+Structura sistemului de fișiere este alcătuit dintr-o bază de date pentru gestionarea fișierelor:
+* `Bloc de boot` – Este localizat în primele sectoare alocate sistemului de fișiere, conține informații folosite pentru a încărcarea sistemului de operare. 
+* `Super bloc`– Acesta este un singur bloc care este situat imediat după blocul de boot și conține informații despre sistemul de fișiere, cum ar fi tabelul inode, mărimea blocurilor logice și mărimea sistemului de fișiere.
+* `Tabel Inode` – ca o bază de date care gestionează fișierele. Fiecare fișier sau director are o intrare unică (ID) în tabelul inode și conține diverse informații despre fișier.
+* `Blocuri de date` – Acestea sunt practic datele pentru fișiere și directoare.
+
+`sudo parted -l`  - putem vizualiza partitia tip MBR sau GPT.
+
+### _Partiționarea discului_
+Există mai multe utilitare disponibile pentru acest lucru:
+* fdisk – în principal o unealtă de partiționare în linie de comandă, nu are suport GPT
+* parted – este o unealtă în linie de comandă, care are suport pentru tipurile de partiționare MBR și GPT
+* gparted – este versiunea cu interfață grafică (GUI) a parted
+* gdisk – fdisk, dar nu are suport MBR, numai suport GPT
+
+        Exercițiu : Partiționați un dispozitiv USB jumătate cu o partiție ext4 iar cealaltă jumătate să rămână spațiu liber.
+
+### _Crearea sistemelor de fișiere_
+`sudo mkfs -t ext4 /dev/sdb2`
+
+ Utilitarul (comanda) **mkfs** (make filesystem) ne permite să specificam tipul sistemului de fișiere pe care îl dorim și unde dorim să fie creat. Vom dori să cream un sistem de fișiere pe un disc partiționat recent sau pe un dispozitiv mai vechi pe care dorim să îl repartiționam. Mai mult ca sigur ne vom distruge sistemul de fișiere dacă încercam să cream un altul peste cel existent. Așa că mare atenție!
+
+    Exercițiu : Creați un sistem de fișiere ext4 pe dispozitivul usb.
+
+### _Comenzile mount și umount_
+Înainte de a vizualiza conținutul sistemului de fișiere, va trebui să-l ”montam”. Pentru a face asta vom avea nevoie de locația dispozitivului, tipul de sistem de fișiere și de punctul de montare. Un punct de montare este un director din cadrul sistemului de fișiere unde va fi atașat noul sistem de fișiere pe care dorim să-l montăm. Practic vom monta dispozitivul într-un punct de montare.
+
+Primul pas va fi să creăm punctul de montare, în cazul nostru **mkdir /dispozitivul_meu** :  `sudo mount -t ext4 /dev/sdb2 /dispozitivul_meu`
+Opțiunea ,,-t" specifică tipul sistemului de fișiere, apoi locația dispozitivului, respectiv /dev/sda2, iar ultimul argument al comenzii îl reprezintă punctul de montare, adică /dispozitivul meu.
+
+Pentru a ”demonta” un dispozitiv din punctul în care este montat, tastăm următoarea comandă: `sudo umount /dispozitivul_meu` sau `sudo umount /dev/sdb2`.
+
+Fișierul /etc/fstab
+
+În momentul în care dorim să montăm automat sisteme de fișiere la pornirea sistemului le putem adăuga într-un fișier denumit /etc/fstab (pronunța ”ef es tab” și nu ”ef stab”) o prescurtare pentru file system table (tabel al sistemului de fișiere). Acest fișier conține o listă permanentă a sistemelor de fișiere montate: `cat /etc/fstab`.
+
+### _Partiția swap_
+**swap-ul** este folosit pentru alocarea de memorie virtuală sistemului gazdă. Dacă avem puțină memorie, sistemul utilizează această partiție pentru a ”transfera” părți de memorie a proceselor în așteptare pe disc. 
+
+Să spunem că dorim să setăm partiția /dev/sdb2 să fie folosită ca spațiu swap:
+1. Mai întâi ne asiguram că nu avem nimic pe acea partiție
+2. Rulam comanda: mkswap /dev/sdb2 pentru inițializare swap
+3. Rulam comanda: swapon /dev/sdb2 pentru activare spațiu
+4. Dacă dorim ca partiția swap să fie persistentă la restartare, veți avea nevoie să adăugați o intrare în cadrul fișierului /etc/fstab. 
+5. Pentru a șterge swap: swapoff /dev/sdb2
+
+### _Utilizarea discului_
+Pentru a vedea gradul de ocupare (folosire) al discurilor noastre : `df -h` . Opțiunea -h ne afișează datele într-un format prietenos oamenilor. Putem vedea despre ce dispozitiv e vorba, cât spațiu a mai rămas nefolosit și cât a fost folosit.
+`du -h` - ce fișiere și directoare ocupă cel mai mult spațiu. Pentru aceasta putem folosi comanda du.
+
+### _Depanarea sistemului de fișiere_
+Uneori sistemul nostru de fișiere nu este în cea mai bună stare, de cele mai multe ori cauzată de o închidere bruscă, ceea ce duce la date corupte pe respectivul disc. Depinde de sistemul de operare dacă va încerca să se autodepaneze (deși cu siguranță o putem face noi înșine).
+
+Comanda **fsck** (filesystem check) este folosită pentru verificarea integrității unui sistem de fișiere și unde este posibil chiar pentru autodepanare. De regulă, în momentul inițializării discului de stocare a unui sistem de calcul, comanda fsck va fi rulată înainte de a monta discul pentru a se asigura că totul este în regulă. Totuși uneori, discul este atât de avariat încât va trebui să facem asta manual. Însă, ne asiguram că facem acest lucru folosind un alt disc de salvare, diferit de cel care trebuie depanat, sau undeva unde putem accesa sistemul de fișiere (partiția) fără a fi montată.
+`sudo fsck /dev/sda`
+
+### _Inoduri_
+Sistemul de fișiere este alcatuit din toate fișierele efective, dar și o bază de date care le gestionează eficient. Această bază de date este cunoscută sub denumirea de tabel inode.
+Un _inode_ (index node) este o înregistrare într-un tabel și există câte una pentru fiecare fișier. Aceasta descrie totul despre fișier, cum ar fi:
+- Tipul de fișier – fișier normal, director, dispozitiv tip caracter.
+- Proprietarul
+- Grupul
+- Permisiuni de acces
+- Amprenta orară – mtime (ora și data ultimei modificări), ctime (ora și data ultimei schimbări de atribute), atime (ora și data ultimei modificări)
+- Numărul de legături fizice (hardlinks) către fișier
+- Mărimea fișierului
+- Numărul de blocuri alocat pentru fișier
+- Pointerii către blocurile de date ale fișierului – cel mai important!
+- Practic inodurile stochează totul despre fișier, cu excepția numelui fișierului și a fișierului în sine!
+
+_Când sunt create indourile?_
+
+În momentul în care un sistem de fișiere este creat, se alocă și spațiu pentru inoduri deasemenea. Există mai multe tipuri de algoritmi care se execută pentru a determina cu exactitate de cât spațiu pentru inoduri este nevoie, în funcție de volumul discului și nu numai. Pentu a vedea câte inoduri sunt disponibile pe sistemul dvs. folosiți comanda `df -i`.
+
+Inodurile sunt identificate numeric. În momentul în care un fișier este creat, acestuia i se atribuie un număr inode, în ordine crescătoare. Pentru a vizualiza numărul de inoduri, rulam comanda `ls -li` : primul câmp al acestei comenzi listează numărul inode.
+Pentru informații detaliate despre un fișier o facem cu ajutorul comenzii stat: `stat ~/Desktop/`
+
+_Cum localizează inodurile fișierele?_
+
+Noi știm sigur că datele nostre sunt undeva pe disk, dar, din păcate nu au fost stocat secvențial. Așa că va trebui să folosim inodurile. Acestea indică sistemului calea către blocurile de date efective ale fișierelor. Într-un sistem de fișiere obișnuit (nu toate funcționează la fel), fiecare inode conține 15 pointeri, iar primii 12 dintre aceștia indică direct către blocurile de date. Cel de-al 13 – lea pointer, face trimitere către un bloc care conține pointeri către alte blocuri. Cel de-al 14-lea se comportă în mod asemănător celui de-al 13-lea. Cel de-al 15-lea la fel. Motivul pentru care sunt structurate astfel este pentru menținerea structurii identice pentru fiecare inode și să fie capabil să găsească fișiere de diferite mărimi. 
