@@ -6,6 +6,9 @@ Cuprins comenzi
 - [5. TAIL](#5-tail)
 - [6. SORT](#6-sort)
 - [7. SED GNU](#7-sed-gnu)
+- [8. DIFF](#8-diff)
+  - [VIMDIFF](#vimdiff)
+  - [MD5SUM](#md5sum)
     - [LINK-URI :](#link-uri-)
   
 
@@ -119,6 +122,42 @@ __PS: Când este furnizat steagul de înlocuire, toate evenimentele vor fi înlo
 Sed este, de asemenea, frecvent utilizat pentru a filtra liniile dintr-un fișier sau un flux. De exemplu, dacă dorim doar să vedem liniile care conțin "John", utilizam: 
 `sed -n'/John/p' test.txt > test2.txt`
 
+# 8. DIFF 
+- **diff**  înseamnă diferență. Această comandă este utilizată pentru a afișa diferențele din fișiere prin compararea fișierelor linie cu linie, si care ne spune care linii dintr-un fișier trebuie modificate pentru a face cele două fișiere identice.
+
+- Important de reținut este că diff folosește anumite simboluri speciale și instrucțiuni care sunt necesare pentru a face două fișiere identice. Acesta ne spune instrucțiunile despre cum să schimbam primul fișier pentru a face ca acesta să se potrivească cu al doilea fișier.
+
+Simbolurile speciale sunt:
+`a: adăugați
+c: schimbare
+d: ștergeți`
+Sintaxă: dif [opțiuni] File1 File2
+
+- Liniile precedate de `a` <sunt linii din primul fișier.
+- Liniile precedate de> sunt linii din al doilea fișier.
+- Linia următoare conține 2,3c3 ceea ce înseamnă că de la linia 2 la linia 3 din primul fișier trebuie modificat pentru a se potrivi cu numărul 3 din al doilea fișier. Apoi ne spune acele linii cu simbolurile de mai sus.
+-Cele trei liniuțe („-“) separă doar liniile fișierului 1 și fișierului 2.
+- ieșirea 3d2 înseamnă ștergerea liniei a treia a primului fișier, astfel încât ambele fișiere să se sincronizeze la linia 2.
+
+## VIMDIFF
+> Modul diferit al lui Vim ne permite să comparăm cu ușurință conținutul a două (sau mai multe) fisiere. Putem apela `vimdiff` din linia de comandă dându-i două sau mai multe nume de fișiere. vimdiff lansează Vim, creează o fereastră pentru fiecare fișier specificat și evidențiază diferențele dintre acestea. 
+
+
+## MD5SUM
+> Md5sum este conceput pentru a verifica integritatea datelor folosind MD5 (Message Digest Algorithm 5). MD5 este un hash criptografic pe 128 de biți și, dacă este utilizat corect, poate fi utilizat pentru a verifica autenticitatea și integritatea fișierului.
+
+Opțiuni :
+- -b: citit în modul binar
+- -c: citim MD5 din fișiere și le verificam
+- -- tag: cream o sumă de control în stil BSD
+- -t: citit în modul text (implicit)
+
+Exemplu 1:
+1. md5sum a.txt > checkmd5.md5
+2. md5sum -c checkmd5.md5
+3. Schimbam o litera din fisierul a.txt
+4. md5sum -c checkmd5.md5 - output-ul va fi a.txt: FAILED
+md5sum: WARNING: 1 computed checksum did NOT match.
 
 ### LINK-URI : 
 * https://ro.joecomp.com/how-use-sed-find
