@@ -9,6 +9,8 @@ Cuprins comenzi
 - [8. DIFF](#8-diff)
   - [VIMDIFF](#vimdiff)
   - [MD5SUM](#md5sum)
+- [9. Standart Streams](#9-standart-streams)
+  - [Summary](#summary)
     - [LINK-URI :](#link-uri-)
   
 
@@ -45,8 +47,8 @@ Cu ajutorul grep **Get Regular Expression Patterns**, se poate căuta într-un f
 * `grep -v "string" file.txt` - inverseaza cautarea patternului. Poate afisa linii care nu se potrivesc cu patternul cautat 
 * `grep -o "string" file.txt` -afiseaza doar patternurile gasite. Neinsotit de alta optiunea, grep afiseaza intreaga linie in care a fost gasit stringul cautat. Folosind optiunea –o va afisa doar stringul cautat.
 * `grep -o -b "string" file.txt` - afiseaza pozitia stringului gasit in cadrul liniei. 
-* `grep "^start" file.txt` sau `grep "end$" file.txt`-Gaseste liniile care incep sau se inchei cu stringul cautat.
-
+* `grep "^start" file.txt` sau `grep "end$" file.txt`-Gaseste liniile care incep sau se inchei cu string-ul cautat.
+![poza](string-kernel.png)
 
 # 3. CAT
 * `cat` -prescurtarea de la concatenate. Nu este foarte bună pentru vizualizarea fișierelor mari, comanda fiind destinată doar pentru conținut de câteva zeci de linii. Există 4 utilizări comune ale cat comanda:
@@ -158,6 +160,49 @@ Exemplu 1:
 3. Schimbam o litera din fisierul a.txt
 4. md5sum -c checkmd5.md5 - output-ul va fi a.txt: FAILED
 md5sum: WARNING: 1 computed checksum did NOT match.
+
+
+# 9. Standart Streams
+
+Fiecare fisier in Linux are un File Descriptor asociat cu el. Un File Descriptor este un numar. Orice program rulat in linia de comanda are 3 "file descriptor-i" (asa ii primeste de la kernerl-ul de linux cand programul este rulat".
+
+- File descriptoru-ul cu valoarea 0 care este Standard Input Device **stdin**. Tastatura este Standard Input Device implicit.
+- File descriptoru-ul cu valoarea 1 care este Standard Output Device - **stdout**. Ecranul este Standard Output Device implicit.
+- File descriptoru-ul cu valoarea 2 care este Standard Error Device - **stderr**. Ecranul este Standard Error Device implicit.
+
+Operatori:
+- ">" este operatorul de redirectare a al iesirii
+- ">>" adauga date la un fisier deja existent
+- "<" este operatorul de redirectare al intrarii
+- ">&" Redirecteaza iesirea unui fisier in altul
+
+
+![poza](standart%20streams%201.jpg)
+![poza](standart%20streams%202.jpg)
+
+
+
+## Summary
+1. `command > output.txt`: The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.
+
+2. `command >> output.txt`: The standard output stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+
+3. `command 2> output.txt`: The standard error stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, it gets overwritten.
+
+4. `command 2>> output.txt`: The standard error stream will be redirected to the file only, it will not be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+
+5. `command &> output.txt `or `command > output.txt 2>&1`: Both the standard output and standard error stream will be redirected to the file only, nothing will be visible in the terminal. If the file already exists, it gets overwritten.
+
+6. `command &>> output.txt` or `command >> output.txt 2>&1`: Both the standard output and standard error stream will be redirected to the file only, nothing will be visible in the terminal. If the file already exists, the new data will get appended to the end of the file..
+
+7. `command | tee output.txt`: The standard output stream will be copied to the file, it will still be visible in the terminal. If the file already exists, it gets overwritten.
+
+8. `command | tee -a output.txt`: The standard output stream will be copied to the file, it will still be visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+
+9. `command |& tee output.txt`: Both the standard output and standard error streams will be copied to the file while still being visible in the terminal. If the file already exists, it gets overwritten.
+
+10. `command |& tee -a output.txt`: Both the standard output and standard error streams will be copied to the file while still being visible in the terminal. If the file already exists, the new data will get appended to the end of the file.
+
 
 ### LINK-URI : 
 * https://ro.joecomp.com/how-use-sed-find
