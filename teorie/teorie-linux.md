@@ -74,6 +74,47 @@ Răspuns: Linux este un sistem de operare open-source și în zilele noastre cre
 ### _Explicati comanda cat_:
 Cat are prescurtarea de la concatenate. Aceasta nu numai că afișează conținutul unui fișier, combina mai multe fișiere afișându-vă conținutul acestora dar chiar poate și sa creeze fisier nou.
 
+### _Codul binar_ :
+Calculatorul stie sa retina doar 1 si 0 (codificarea informatiei).
+Bitul este cea mai mica valoare,  8 biti = 1 byte 
+Valorile intr-un byte:
+
+128 - 64 - 32 - 16  -8-  4-  2-  1
+
+ ---0  --   0 ---   0 --  0 --  0 -  1 - 1 - 0
+
+1 Byte Poate stoca maxim 255 valori posibile, adiva cei 8 biti vor fi doar 11111111.
+
+**Cum se numara?**
+
+Adunam ce avem la 1, in cazul de mai sus 4+2=6. Valoarea din codul binar =6 (cod decimal)
+
+**Cum transformam invers 27 in cod binar?**
+
+128 - 64 - 32 - 16  -8-  4-  2-  1
+
+ ---0  --   0 ---   0 --  1 --  1 -  0 - 1 - 1
+
+ 1) 27-16=11 (scad in valoarea imediat mai mica, unde apare 1)
+ 2) 11-8=3 (rezultatul obtinut =>procedez la fel)
+ 3) 3-2=1
+ 4) 1-1=0
+
+Deci 27 este compus din 16+8+2+1. Aceste cifre vor fi bifate si considerate 1, iar celelalte cu 0.
+Raspunsul final -  ---0  --   0 ---   0 --  1 --  1 -  0 - 1 - 1
+
+Calculatorul vede valoarea 1 - activata, si valoarea 0 - dezactivata.
+Tastatura comunica cu calculatorul in sistemul ASCII. Mai intai tastam literele, tastatura transforma in ASCII, apoi este schimbat in cod binar, pentru ca procesorul sa inteleaga. ASCII este un standart american code Information Interchange - sistem de codificare a caracterelor, bazat pe alfabetul englez si contine 128 de caractere.
+![poza](ASCII.png)
+
+- 1 bit (1 sau 0)
+- 1 byte sau octet (contine 8 biti)
+- 1 kilobyte (1024 bytes/ sau octeti )
+- 1 megabyte (1024 Kb)
+- 1 Gb (contine 1024 Mb)
+- 1 Tb (contine 1024 Gb)
+
+
 
 ## **Capitol 2 - Utilizatori și grupuri**
 ![poza](utilizatori_si_grupuri.jpg)
